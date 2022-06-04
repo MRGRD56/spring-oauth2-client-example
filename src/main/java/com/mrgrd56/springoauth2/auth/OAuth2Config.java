@@ -32,7 +32,7 @@ public class OAuth2Config {
                 .logout(logout -> logout
                         .permitAll()
                         .invalidateHttpSession(true)
-                        .deleteCookies("JSESSIONID")
+                        .deleteCookies("JSESSIONID") //TODO use value from config
                         .logoutSuccessUrl("/")
                 )
                 .oauth2Login(oauth2 -> oauth2

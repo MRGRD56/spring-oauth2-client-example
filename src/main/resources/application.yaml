@@ -26,6 +26,7 @@ spring:
       initialize-schema: always
     store-type: jdbc
     timeout: 604800
-  sql:
-    init:
-      mode: always
+#  sql:
+#    init:
+#      mode: always
+#      schema-locations: classpath:/sql/schema.sql
