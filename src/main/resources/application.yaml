@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    include: secrets
+  datasource:
+    url: SECRET
+    username: SECRET
+    password: SECRET
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: SECRET
+            client-secret: SECRET
+            client-name: spring-oauth2-example
+#            client-authentication-method: ?
+#            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+#            authorization-grant-type: ?
+  jpa:
+    hibernate:
+      ddl-auto: update
+  session:
+    jdbc:
+      table-name: spring_session
+      schema: classpath:/sql/schema.sql
+      initialize-schema: always
+    store-type: jdbc
+    timeout: 604800
+  sql:
+    init:
+      mode: always
